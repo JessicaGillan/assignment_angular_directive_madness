@@ -3,11 +3,14 @@ DM.directive('quoteForm', function() {
     templateUrl: '/js/directives/quote_form.html',
     scope: true,
     link: function functionName(scope, element) {
-      scope.handleSubmit = function(valid) {
-        scope.processQuoteForm(valid, scope.quote);
-        if (valid) {
+      scope.handleSubmit = function(quoteForm) {
+        console.log(quoteForm)
+        scope.processQuoteForm(quoteForm.$valid, scope.quote);
+        if (quoteForm.$valid) {
           scope.quote = null;
         }
+
+        quoteForm.$setPristine(); 
       }
     }
   }
