@@ -1,20 +1,19 @@
 DM.controller("QuotesCtrl", ['$scope', function($scope) {
   $scope.quotes = [];
 
-  $scope.processQuoteForm = function(valid){
-    console.log("process form!");
-    console.log("$valid", valid);
+  $scope.deleteQuote = function(index, event) {
+    event.preventDefault();
+    $scope.quotes.splice(index, 1);
+  };
+
+  $scope.processQuoteForm = function(valid, quote) {
     if(valid) {
       var quote = {
-        message: $scope.message,
-        author: $scope.author
+        message: quote.message,
+        author: quote.author
       }
 
       $scope.quotes.push(quote);
-
-      console.log("quotes", $scope.quotes);
-      $scope.message = "";
-      $scope.author = "";
     }
   }
 }]);

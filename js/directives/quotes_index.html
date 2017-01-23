@@ -1,10 +1,12 @@
 <table class="table table-striped">
-  <th>
-    <td>Quote</td>
-    <td>Author</td>
-  </th>
+  <tr>
+    <th>Quote</th>
+    <th>Author</th>
+    <th></th>
+  </tr>
   <tr ng-repeat="quote in quotes">
     <td>{{ quote.message }}</td>
     <td>{{ quote.author}}</td>
+    <td><a href="#" ng-click="deleteQuote($index, $event)">delete</a></td>
   </tr>
 </table>

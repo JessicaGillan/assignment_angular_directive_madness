@@ -7,6 +7,7 @@
     <title>Directives</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,11 +21,13 @@
     <main-nav></main-nav>
 
     <h2>Quotes</h2>
-
-    <div class="col-sm-8 col-sm-offset-2">
-      <quote-form></quote-form>
-      
-      <quotes-index></quotes-index>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <quote-form></quote-form>
+        <br>
+        <p ng-show="quotes.length < 1">No quotes yet.</p>
+        <quotes-index ng-show="quotes.length"></quotes-index>
+      </div>
     </div>
 
 
