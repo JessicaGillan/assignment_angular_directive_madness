@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="DM">
+<html lang="en" ng-app="DM" ng-controller='dmCtrl'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,11 +19,25 @@
     <main-header colorize color="pink" background="black">I'm a header!</main-header>
     <main-nav></main-nav>
 
-    <div class="mouse-events">
+    <p>ctrlScopePrimA: {{ ctrlScopePrimA }}</p>
+    <p>ctrlScopePrimB: {{ ctrlScopePrimB }}</p>
+    <p>ctrlScopeObjA: {{ ctrlScopeObjA.test }}</p>
+    <p>ctrlScopeObjB: {{ ctrlScopeObjB.test }}</p>
+
+    <scope-test one-way-prim="{{ ctrlScopePrimA }}" two-way-prim="ctrlScopePrimB"
+    one-way-obj="{{ ctrlScopeObjA }}" two-way-obj="ctrlScopeObjB">
+    </scope-test>
+
+    <p>ctrlScopePrimA: {{ ctrlScopePrimA }}</p>
+    <p>ctrlScopePrimB: {{ ctrlScopePrimB }}</p>
+    <p>ctrlScopeObjA: {{ ctrlScopeObjA.test }}</p>
+    <p>ctrlScopeObjB: {{ ctrlScopeObjB.test }}</p>
+
+    <!-- <div class="mouse-events">
       <mouse-text></mouse-text>
       <hover-text></hover-text>
       <clickable-button></clickable-button>
-    </div>
+    </div> -->
 
     <p ng-hide="num">No Number Selected</p>
 
@@ -74,5 +88,7 @@
     <script src="js/directives/mouse_text.js" charset="utf-8"></script>
     <script src="js/directives/hover_text.js" charset="utf-8"></script>
     <script src="js/directives/clickable_button.js" charset="utf-8"></script>
+    <script src="js/controllers/dm.js" charset="utf-8"></script>
+    <script src="js/directives/scope_test.js" charset="utf-8"></script>
   </body>
 </html>

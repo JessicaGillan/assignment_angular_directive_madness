@@ -7,6 +7,7 @@ DM.directive('colorize', function () {
     },
     link: function(scope, element, attrs) {
       console.log(attrs);
+      console.log(attrs);
       console.log(scope);
 
       element[0].style.color = scope.color;
