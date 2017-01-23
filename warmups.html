@@ -15,14 +15,15 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="container">
+    <main-header>I'm a header!</main-header>
     <main-nav></main-nav>
-
+    <copyright>Company name...</copyright>
     <p ng-hide="num">No Number Selected</p>
     
     <div ng-if="num">
-      <p ng-show="{{num%2 !== 0}}">Num is odd</p>
-      <p ng-show="{{num%2 === 0}}">Num is even</p>
+      <p ng-show="num % 2 !== 0">Num is odd </p>
+      <p ng-show="num % 2 === 0">Num is even</p>
       <p ng-show="num">Num selected: {{ num }}</p>
     </div>
 
@@ -56,5 +57,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/directives/main_nav.js" charset="utf-8"></script>
+    <script src="js/directives/main_header.js" charset="utf-8"></script>
+    <script src="js/directives/copyright.js" charset="utf-8"></script>
   </body>
 </html>
