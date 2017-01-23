@@ -1,4 +1,14 @@
+<h3>In Directive Template </h3>
+
 <p>dir scopePrimOneWay: {{ oneWayPrim }}</p>
 <p>dir twoWayPrim: {{ twoWayPrim }}</p>
 <p>dir oneWayObj: {{ oneWayObj }}</p>
 <p>dir twoWayObj: {{ twoWayObj.test }}</p>
+
+<input ng-model="oneWayPrim" type="text">
+<input ng-model="twoWayPrim" type="text">
+
+<form ng-submit="sayHelloDir({name: name})">
+  <input ng-model="name" type="text">
+  <input type="submit" name="Submit" value="Submit">
+</form>

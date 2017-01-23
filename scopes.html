@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DM" ng-controller='scopeCtrl'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directives</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="container">
+    <main-header colorize color="pink" background="black">I'm a header!</main-header>
+    <main-nav></main-nav>
+
+    <h2>Before </h2>
+    <input ng-model="ctrlScopePrimOne" type="text">
+    <input ng-model="ctrlScopePrimTwo" type="text">
+
+    <p>ctrlScopePrimA: {{ ctrlScopePrimOne }}</p>
+    <p>ctrlScopePrimB: {{ ctrlScopePrimTwo }}</p>
+    <p>ctrlScopeObjA: {{ ctrlScopeObjOne.test }}</p>
+    <p>ctrlScopeObjB: {{ ctrlScopeObjTwo.test }}</p>
+
+  <h4>{{ sayHello }}</h4>
+    <scope-test one-way-prim="{{ ctrlScopePrimOne }}" two-way-prim="ctrlScopePrimTwo"
+    one-way-obj="{{ ctrlScopeObjOne }}" two-way-obj="ctrlScopeObjTwo"
+    say-hello-dir="sayHello(name)">
+    </scope-test>
+
+    <h2>After Template</h2>
+    <p>ctrlScopePrimA: {{ ctrlScopePrimOne }}</p>
+    <p>ctrlScopePrimB: {{ ctrlScopePrimTwo }}</p>
+    <p>ctrlScopeObjA: {{ ctrlScopeObjOne.test }}</p>
+    <p>ctrlScopeObjB: {{ ctrlScopeObjTwo.test }}</p>
+
+    <copyright year="1985">Company name...</copyright>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/directives/main_nav.js" charset="utf-8"></script>
+    <script src="js/directives/main_header.js" charset="utf-8"></script>
+    <script src="js/directives/copyright.js" charset="utf-8"></script>
+    <script src="js/directives/colorize.js" charset="utf-8"></script>
+    <script src="js/controllers/scope_ctrl.js" charset="utf-8"></script>
+    <script src="js/directives/scope_test.js" charset="utf-8"></script>
+  </body>
+</html>

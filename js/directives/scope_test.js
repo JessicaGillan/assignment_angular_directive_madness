@@ -1,6 +1,4 @@
 DM.directive('scopeTest', function() {
-
-
   return {
     templateUrl: 'js/directives/scope_test.html',
     restrict: 'E',
@@ -10,12 +8,7 @@ DM.directive('scopeTest', function() {
       twoWayPrim: '=',
       oneWayObj: '@',
       twoWayObj: '=',
-    },
-    link: function(scope, el, attrs) {
-      scope.oneWayPrim = "CHANGED";
-      scope.twoWayPrim = "CHANGED";
-      scope.oneWayObj = "CHANGED";
-      scope.twoWayObj.test = "CHANGED";
+      sayHelloDir: '&'
     }
   }
 });
