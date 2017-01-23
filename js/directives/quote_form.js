@@ -1,6 +1,9 @@
 DM.directive('quoteForm', function() {
   return {
     templateUrl: '/js/directives/quote_form.html',
-    scope: true
+    scope: true,
+    link: function functionName() {
+
+    }
   }
 });

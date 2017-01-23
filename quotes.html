@@ -15,9 +15,18 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="container" ng-controller="QuotesCtrl">
     <main-header colorize color="pink" background="black">I'm a header!</main-header>
     <main-nav></main-nav>
+
+    <h2>Quotes</h2>
+
+    <div class="col-sm-8 col-sm-offset-2">
+      <quote-form></quote-form>
+      
+      <quotes-index></quotes-index>
+    </div>
+
 
     <copyright year="1985">Company name...</copyright>
 
@@ -25,6 +34,8 @@
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/directives/colorize.js" charset="utf-8"></script>
     <script src="js/directives/main_nav.js" charset="utf-8"></script>
+    <script src="js/directives/quotes_index.js" charset="utf-8"></script>
+    <script src="js/directives/quote_form.js" charset="utf-8"></script>
     <script src="js/controllers/quotes_ctrl.js" charset="utf-8"></script>
   </body>
 </html>

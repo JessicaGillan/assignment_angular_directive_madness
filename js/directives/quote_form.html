@@ -1,11 +1,11 @@
-<form id="quote-form" on-submit="processQuoteForm()">
+<form name="quoteForm" id="quote-form" ng-submit="processQuoteForm(quoteForm.$valid)">
   <div class="form-group">
     <label>Message</label>
-    <input class="form-control" type="text" name="message">
+    <input class="form-control" type="text" name="message" ng-model="message">
   </div>
   <div class="form-group">
     <label>Author</label>
-    <input class="form-control" type="text" name="author">
+    <input class="form-control" type="text" name="author" ng-model="author">
   </div>
-  <button type="submit" class="btn btn-primary">
+  <input type="submit" class="btn btn-primary">
 </form>
