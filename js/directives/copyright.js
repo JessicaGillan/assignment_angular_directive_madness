@@ -3,8 +3,11 @@ DM.directive("copyright", function() {
     templateUrl: 'js/directives/copyright.html',
     restrict: 'E',
     transclude: true,
-    link: function(scope, element, attributes) {
-      
+    scope: {
+      year: '='
+    },
+    link: function(scope, elem, attributes) {
+      elem[0].querySelector('#year').innerHTML = scope.year;
     }
   }
 });

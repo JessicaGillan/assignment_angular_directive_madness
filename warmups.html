@@ -16,11 +16,12 @@
     <![endif]-->
   </head>
   <body class="container">
-    <main-header>I'm a header!</main-header>
+    <main-header colorize color="pink" background="black">I'm a header!</main-header>
     <main-nav></main-nav>
-    <copyright>Company name...</copyright>
     <p ng-hide="num">No Number Selected</p>
-    
+
+    <p colorize color="pink" background="black">Colorize Test</p>
+
     <div ng-if="num">
       <p ng-show="num % 2 !== 0">Num is odd </p>
       <p ng-show="num % 2 === 0">Num is even</p>
@@ -54,10 +55,14 @@
         </label>
       </div>
     </form>
+
+    <copyright year="1985">Company name...</copyright>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/directives/main_nav.js" charset="utf-8"></script>
     <script src="js/directives/main_header.js" charset="utf-8"></script>
     <script src="js/directives/copyright.js" charset="utf-8"></script>
+    <script src="js/directives/colorize.js" charset="utf-8"></script>
   </body>
 </html>
