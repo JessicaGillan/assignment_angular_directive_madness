@@ -9,6 +9,11 @@ DM.directive('scopeTest', function() {
       oneWayObj: '@',
       twoWayObj: '=',
       sayHelloDir: '&'
+    },
+    link: function(scope){
+      scope.submitCallback = function() {
+        scope.sayHelloDir({name: scope.name + " from isolated scope" });
+      };
     }
   }
 });

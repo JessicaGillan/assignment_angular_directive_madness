@@ -7,8 +7,10 @@
 
 <input ng-model="oneWayPrim" type="text">
 <input ng-model="twoWayPrim" type="text">
+<input ng-model="oneWayObj" type="text">
+<input ng-model="twoWayObj.test" type="text">
 
-<form ng-submit="sayHelloDir({name: name})">
+<form ng-submit="submitCallback()">
   <input ng-model="name" type="text">
   <input type="submit" name="Submit" value="Submit">
 </form>
